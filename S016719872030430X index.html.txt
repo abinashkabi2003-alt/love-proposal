@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweta ❤️ Abinash | Forever</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:black;
+    color:white;
+    text-align:center;
+}
+
+#intro{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#intro h1{
+    font-size:2rem;
+    animation:fadeIn 2s ease forwards;
+}
+
+#enterBtn{
+    margin-top:30px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff4e91,#ff758c);
+    color:white;
+    cursor:pointer;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+body.loveMode{
+    background: radial-gradient(circle at bottom,#0f2027,#203a43,#2c5364);
+}
+
+.skyText{
+    position:absolute;
+    top:20px;
+    width:100%;
+    font-size:1.8rem;
+    font-weight:700;
+    text-shadow:0 0 20px #ff4e91,0 0 40px #ff758c;
+    animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+    from{text-shadow:0 0 10px #ff4e91;}
+    to{text-shadow:0 0 30px #ff758c;}
+}
+
+.star{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle{
+    from{opacity:0.3;}
+    to{opacity:1;}
+}
+
+.shooting-star{
+    position:absolute;
+    width:2px;
+    height:80px;
+    background:linear-gradient(-45deg,white,transparent);
+    transform:rotate(45deg);
+    animation:shoot 2s linear infinite;
+}
+@keyframes shoot{
+    from{transform:translate(-200px,-200px) rotate(45deg);}
+    to{transform:translate(100vw,100vh) rotate(45deg);}
+}
+
+.petal{
+    position:absolute;
+    font-size:20px;
+    animation:fall 8s linear infinite;
+}
+@keyframes fall{
+    from{transform:translateY(-10vh) rotate(0deg);}
+    to{transform:translateY(110vh) rotate(360deg);}
+}
+
+.container{
+    margin-top:20vh;
+    padding:20px;
+}
+
+button{
+    margin:15px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff4e91,#ff758c);
+    color:white;
+    cursor:pointer;
+}
+
+.ring3d{
+    font-size:100px;
+    animation:rotateRing 4s linear infinite;
+}
+@keyframes rotateRing{
+    from{transform:rotateY(0deg);}
+    to{transform:rotateY(360deg);}
+}
+
+.particle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    animation:burst 1s ease-out forwards;
+}
+@keyframes burst{
+    from{opacity:1;}
+    to{opacity:0;}
+}
+
+.photo{
+    width:240px;
+    border-radius:20px;
+    margin-top:20px;
+    box-shadow:0 0 30px rgba(255,255,255,0.5);
+}
+
+.messageBox{
+    max-width:90%;
+    margin:auto;
+    font-size:1.2rem;
+    line-height:1.8;
+    animation:fadeIn 2s ease forwards;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+    <h1>Sweta ❤️ Abinash</h1>
+    <p>Every love story is beautiful... but ours is my favorite.</p>
+    <button id="enterBtn" onclick="enterLove()">Enter Our Love Story ✨</button>
+</div>
+
+<audio id="boomSound" src="https://assets.mixkit.co/sfx/preview/mixkit-firework-explosion-1689.mp3"></audio>
+
+<iframe id="ytMusic" width="0" height="0"
+src=""
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+<script>
+
+function enterLove(){
+    document.getElementById("intro").style.display="none";
+    document.body.classList.add("loveMode");
+
+    document.getElementById("ytMusic").src =
+    "https://www.youtube.com/embed/_tYlzd-Yi8k?autoplay=1&loop=1&playlist=_tYlzd-Yi8k";
+
+    createStars();
+    createShootingStars();
+    createPetals();
+
+    document.body.innerHTML += `
+    <div class="skyText">Sweta ❤️ Abinash</div>
+    <div class="container">
+        <div class="messageBox">
+        Sweta ❤️<br><br>
+        From the moment you came into my life,<br>
+        everything changed in the most beautiful way.<br><br>
+
+        You are not just someone I love...<br>
+        You are my peace when I am restless,<br>
+        my strength when I am weak,<br>
+        my smile when the world feels heavy.<br><br>
+
+        In your eyes, I found my home.<br>
+        In your voice, I found my comfort.<br>
+        In your heart, I found my forever.<br><br>
+
+        I don't want a life without you in it.<br>
+        I don't want dreams where you are missing.<br>
+        I don't want a future where your hand isn't in mine.<br><br>
+
+        I promise to stand beside you,<br>
+        respect you, protect you,<br>
+        and love you endlessly through every season of life.<br><br>
+
+        And today, under these stars... 🌌<br>
+        with all my heart and soul...
+        </div>
+
+        <div class="ring3d">💍</div>
+
+        <h2>
+        Sweta...<br>
+        Will you marry me and stay with Abinash forever? 💖
+        </h2>
+
+        <button onclick="yesClicked()">YES ❤️</button>
+        <button onmouseover="moveNo(this)">NO 🙈</button>
+    </div>
+    `;
+}
+
+function yesClicked(){
+    document.body.style.background="radial-gradient(circle,#ff4e91,#8e2de2)";
+    startFireworks();
+
+    document.body.innerHTML += `
+    <div class="container">
+        <h1>
+        Sweta ❤️ Abinash<br><br>
+        This is not just a proposal...<br>
+        This is a promise of forever.<br><br>
+
+        From this day forward,<br>
+        every sunrise will be ours,<br>
+        every dream will be shared,<br>
+        and every heartbeat will whisper your name. 💍✨
+        </h1>
+        <img src="https://sporting-amethyst-b8l1gra9q2.edgeone.app/" class="photo">
+    </div>
+    `;
+}
+
+function createStars(){
+    for(let i=0;i<120;i++){
+        let star=document.createElement("div");
+        star.classList.add("star");
+        star.style.width=Math.random()*3+"px";
+        star.style.height=star.style.width;
+        star.style.top=Math.random()*100+"vh";
+        star.style.left=Math.random()*100+"vw";
+        document.body.appendChild(star);
+    }
+}
+
+function createShootingStars(){
+    setInterval(()=>{
+        let shoot=document.createElement("div");
+        shoot.classList.add("shooting-star");
+        shoot.style.top=Math.random()*50+"vh";
+        shoot.style.left=Math.random()*50+"vw";
+        document.body.appendChild(shoot);
+        setTimeout(()=>shoot.remove(),2000);
+    },3000);
+}
+
+function createPetals(){
+    setInterval(()=>{
+        let petal=document.createElement("div");
+        petal.classList.add("petal");
+        petal.innerHTML="🌹";
+        petal.style.left=Math.random()*100+"vw";
+        document.body.appendChild(petal);
+        setTimeout(()=>petal.remove(),8000);
+    },500);
+}
+
+function startFireworks(){
+    let sound=document.getElementById("boomSound");
+    sound.play();
+
+    for(let i=0;i<8;i++){
+        let x=Math.random()*window.innerWidth;
+        let y=Math.random()*window.innerHeight;
+        createExplosion(x,y);
+    }
+}
+
+function createExplosion(x,y){
+    for(let i=0;i<30;i++){
+        let particle=document.createElement("div");
+        particle.classList.add("particle");
+        particle.style.background=`hsl(${Math.random()*360},100%,60%)`;
+        particle.style.left=x+"px";
+        particle.style.top=y+"px";
+        let angle=Math.random()*2*Math.PI;
+        let distance=Math.random()*150;
+        particle.style.transform=`translate(${Math.cos(angle)*distance}px,${Math.sin(angle)*distance}px)`;
+        document.body.appendChild(particle);
+        setTimeout(()=>particle.remove(),1000);
+    }
+}
+
+function moveNo(btn){
+    btn.style.position="absolute";
+    btn.style.left=Math.random()*window.innerWidth+"px";
+    btn.style.top=Math.random()*window.innerHeight+"px";
+}
+
+</script>
+</body>
+</html>
